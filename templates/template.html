@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>PAGES Template</title>
+   <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+ </head>
+ <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">PAGES</h1>
+        <strong><nav>
+          <ul class="menu">
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('page1') }}">Page 1</a></li>
+            <li><a href="{{ url_for('page2') }}">Page 2</a></li>
+            <li><a href="{{ url_for('page3') }}">Page 3</a></li>
+            <li><a href="{{ url_for('page4') }}">Page 4</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    
+ </body>
+</html>
